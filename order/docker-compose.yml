@@ -1,0 +1,12 @@
+version: '3'
+services:
+  ms_order:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: ms_order
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./db:/var/lib/mysql
